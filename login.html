@@ -21,7 +21,7 @@
 
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login Form</p>
 
-                  <form class="mx-1 mx-md-4" id="mainForm">
+                  <!-- <form class="mx-1 mx-md-4" id="mainForm"> -->
 
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
@@ -47,7 +47,7 @@
                       <a href="register.html"> <button type="button" id="signUp" class="btn btn-success btn-lg">Sign
                           Up</button></a>
                     </div>
-                  </form>
+                  <!-- </form> -->
 
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
@@ -89,7 +89,6 @@
     let email = document.getElementById("email");
     let password = document.getElementById("password");
     let loginBtn = document.getElementById("login");
-    let signUp = document.getElementById("password");
     let registerBtn = document.getElementById("registerBtn");
     let fullname = document.getElementById("fullname");
     let signInUser = (evt) => {
@@ -125,8 +124,8 @@
     }
 
 
-    mainForm.addEventListener('submit', signInUser);
-
+    // mainForm.addEventListener('submit', signInUser);
+    loginBtn.onclick = signInUser;
 
   </script>
 
