@@ -84,7 +84,7 @@
                       <div
                         class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"
                       >
-                        <a href="login.html"
+                        <a href="index.html"
                           ><button type="button" class="btn btn-primary btn-lg">
                             Login
                           </button></a
@@ -152,14 +152,14 @@
         createUserWithEmailAndPassword(auth, email.value, password.value)
           .then((credentials) => {
             console.log("Registration successful");
-            // Capture fullname correctly and store in the database
+          
             let userFullname = fullname.value;
             set(ref(db, "UsersAuthList/" + credentials.user.uid), {
               fullname: userFullname,
             });
 
             // Redirect to home.html
-            window.location.href = "home.html";
+            window.location.href = "index.html";
           })
           .catch((err) => {
             alert(err.message);
